@@ -118,3 +118,5 @@ for (var i = 0; i < questions.length; i++) {
     }
 }
 alert("You got" + score + "/" + questions.length);
+
+document.getElementById("quiz").innerHTML = "You got " + score + " correct.";
