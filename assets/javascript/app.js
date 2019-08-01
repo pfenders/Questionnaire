@@ -230,6 +230,8 @@ result: function() {
     panel.append("<h3>Unanswered: " + (questions.length - (this.incorrect + this.correct)) + "</h3>");
 }
 };
+
+
 //Click Events
 $(document).on("click", "#start", function () {
     quizQuestions.start();
