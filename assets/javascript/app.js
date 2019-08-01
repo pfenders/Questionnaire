@@ -105,7 +105,7 @@ const questions = [
 ];
 
 //Timer
-const timer;
+var timer;
 
 let quizQuestions = {
     correct: 0,
@@ -224,10 +224,10 @@ let quizQuestions = {
 result: function() {
     clearInterval(timer);
     $("#sub-wrapper h2").remove();
-    panel.html("<h2>All Done!</h2>");
-    panel.append("<h3>Correct Answers: " + this.correct + "</h3>");
-    panel.append("<h3>Incorrect Answers: " + this.incorrect + "</h3>");
-    panel.append("<h3>Unanswered: " + (questions.length - (this.incorrect + this.correct)) + "</h3>");
+    quizPanel.html("<h2>All Done!</h2>");
+    quizPanel.append("<h3>Correct Answers: " + this.correct + "</h3>");
+    quizPanel.append("<h3>Incorrect Answers: " + this.incorrect + "</h3>");
+    quizPanel.append("<h3>Unanswered: " + (questions.length - (this.incorrect + this.correct)) + "</h3>");
 }
 };
 
