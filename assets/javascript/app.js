@@ -52,13 +52,12 @@ const questions = [
         question: "Who is the owner of Microsoft?",
         answer: ["Bill Clinton", "Robert Half", "Mr Clean", "Bill Gates"],
         correctAns: "Bill Gates"
-    },
-];
+    }];
 
 //Timer
 var timer;
 
-let quizQuestions = {
+var quizQuestions = {
     correct: 0,
     incorrect: 0,
     counter: 120,
