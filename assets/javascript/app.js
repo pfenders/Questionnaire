@@ -120,6 +120,7 @@ let quizQuestions = {
         }
     },
 
+    //Start Function
     start: function () {
         timer = setInterval(quizQuestions.countdown, 1000);
         $("#sub-wrapper").prepend("<h2> Time Remaining: <span id='counter-number'>120</span></h2>");
@@ -133,7 +134,90 @@ let quizQuestions = {
         }
         quizPanel.append("<button id='done'>Done</button>");
     },
-    
+
+    //Done Function
+    done: function () {
+        $.each($("input[name='question-0']:checked"), function () {
+            if ($(this).val() === questions[0].correctAns) {
+                quizQuestions.correct++;
+            } else {
+                quizQuestions.incorrect++;
+            }
+        });
+
+        $.each($("input[name='question-1']:checked"), function () {
+            if ($(this).val() === questions[1].correctAns) {
+                quizQuestions.correct++;
+            } else {
+                quizQuestions.incorrect++;
+            }
+        });
+
+        $.each($("input[name='question-2']:checked"), function () {
+            if ($(this).val() === questions[2].correctAns) {
+                quizQuestions.correct++;
+            } else {
+                quizQuestions.incorrect++;
+            }
+        });
+
+        $.each($("input[name='question-3']:checked"), function () {
+            if ($(this).val() === questions[3].correctAns) {
+                quizQuestions.correct++;
+            } else {
+                quizQuestions.incorrect++;
+            }
+        });
+
+        $.each($("input[name='question-4']:checked"), function () {
+            if ($(this).val() === questions[4].correctAns) {
+                quizQuestions.correct++;
+            } else {
+                quizQuestions.incorrect++;
+            }
+        });
+
+        $.each($("input[name='question-5']:checked"), function () {
+            if ($(this).val() === questions[5].correctAns) {
+                quizQuestions.correct++;
+            } else {
+                quizQuestions.incorrect++;
+            }
+        });
+
+        $.each($("input[name='question-6']:checked"), function () {
+            if ($(this).val() === questions[6].correctAns) {
+                quizQuestions.correct++;
+            } else {
+                quizQuestions.incorrect++;
+            }
+        });
+
+        $.each($("input[name='question-7']:checked"), function () {
+            if ($(this).val() === questions[7].correctAns) {
+                quizQuestions.correct++;
+            } else {
+                quizQuestions.incorrect++;
+            }
+        });
+
+        $.each($("input[name='question-8']:checked"), function () {
+            if ($(this).val() === questions[8].correctAns) {
+                quizQuestions.correct++;
+            } else {
+                quizQuestions.incorrect++;
+            }
+        });
+
+        $.each($("input[name='question-9']:checked"), function () {
+            if ($(this).val() === questions[9].correctAns) {
+                quizQuestions.correct++;
+            } else {
+                quizQuestions.incorrect++;
+            }
+        });
+
+    }
 };
 
 //Click Events
