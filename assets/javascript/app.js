@@ -1,11 +1,9 @@
-const quizArea = document.getElementById('quiz');
-const resultArea = document.getElementById('results');
-const submitButton = document.getElementById('submit');
+const quizPanel = $("#quiz-area");
 
-//Building Quiz
+//Questions
 const questions = [
 {
-    prompt:"What percentage of school leavers and graduates believe that it is important to have fun at work?",
+    question:"What percentage of school leavers and graduates believe that it is important to have fun at work?",
     answer:{
         a:"50%",
         b:"32%",
@@ -15,7 +13,7 @@ const questions = [
     correctAns:"79%"
 },
 {
-    prompt:"During thinking, how much percentage of our brains do we use?",
+    question:"During thinking, how much percentage of our brains do we use?",
     answer:{
         a:"71%",
         b:"35%",
@@ -25,7 +23,7 @@ const questions = [
     correctAns:"35%"
 },
 {
-    prompt:"What country was paper invented in?",
+    question:"What country was paper invented in?",
     answer:{
         a:"China",
         b:"United States",
@@ -35,7 +33,7 @@ const questions = [
     correctAns:"China"
 },
 {
-    prompt:"According to Maslow’s hierarchy of needs what is the final employees need after completing all of the others?",
+    question:"According to Maslow’s hierarchy of needs what is the final employees need after completing all of the others?",
     answer:{
         a:"Love and Belonging",
         b:"Safety",
@@ -45,7 +43,7 @@ const questions = [
     correctAns:"Self-Actualization"
 },
 {
-    prompt:"What percentage of workers believe having access to social media platforms helps them to be more productive?",
+    question:"What percentage of workers believe having access to social media platforms helps them to be more productive?",
     answer:{
         a:"20%",
         b:"53%",
@@ -55,7 +53,7 @@ const questions = [
     correctAns:"39%"
 },
 {
-    prompt: "Which company allows employees to bring their dogs to the work?",
+    question: "Which company allows employees to bring their dogs to the work?",
     answer:{
         a:"Ikea",
         b:"Amazon",
@@ -65,7 +63,7 @@ const questions = [
     correctAns:"Amazon"
 },
 {
-    prompt:"How many minutes a day does the average office worker spend looking for lost files and other items?",
+    question:"How many minutes a day does the average office worker spend looking for lost files and other items?",
     answer:{
         a:"50 Minutes",
         b:"20 Minutes",
@@ -75,7 +73,7 @@ const questions = [
     correctAns:"50 Minutes"
 },
 {
-    prompt:"During an average day, how many miles does a typist’s fingers travel?",
+    question:"During an average day, how many miles does a typist’s fingers travel?",
     answer:{
         a:"6 Miles",
         b:"3.5 Miles",
@@ -85,7 +83,7 @@ const questions = [
     correctAns:"12.6 Miles"
 },
 {
-    prompt:"When was Microsoft established?",
+    question:"When was Microsoft established?",
     answer:{
         a:"2005",
         b:"1998",
@@ -95,7 +93,7 @@ const questions = [
     correctAns:"1975"
 },
 {
-    prompt:"Who is the owner of Microsoft?",
+    question:"Who is the owner of Microsoft?",
     answer:{
         a:"Bill Clinton",
         b:"Robert Half",
@@ -105,3 +103,15 @@ const questions = [
     correctAns:"Bill Gates"
 },
 ];
+
+//Timer
+const timer;
+
+let quizQuestions = {
+    correct: 0,
+    incorrect: 0,
+    counter: 120,
+    countdown: function() {
+        
+    }
+}
