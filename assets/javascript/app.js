@@ -1,7 +1,7 @@
-const quizPanel = $("#quiz-area");
+var quizPanel = $("#quiz-area");
 
 //Questions
-const questions = [
+var questions = [
     {
         question: "What percentage of school leavers and graduates believe that it is important to have fun at work?",
         answer: ["50%", "32%", "79%", "83%"],
@@ -73,13 +73,13 @@ var quizQuestions = {
     //Start Function
     start: function () {
         timer = setInterval(quizQuestions.countdown, 1000);
-        $("#sub-wrapper").prepend("<h2> Time Remaining: <span id='counter-number'>120</span></h2>");
+        $("#sub-wrapper").prepend("<h2> Time Remaining: <span id='counter-number'>120</span> Seconds</h2>");
         $("#start").remove();
 
-        for (let i = 0; i < questions.length; i++) {
+        for (var i = 0; i < questions.length; i++) {
             quizPanel.append("<h2>" + questions[i].question + "</h2>");
             for (var j = 0; j < questions[i].answer.length; j++) {
-                quizPanel.append("<input type='radio' name='question'>" + i + " 'value'" + questions[i].answer[j] + "''>" + questions[i].answer[j]);
+                quizPanel.append("<input type='radio' name='question'>" + i + "value" + questions[i].answer[j] + "''>" + questions[i].answer[j]);
             }
         }
         quizPanel.append("<button id='done'>Done</button>");
@@ -87,7 +87,7 @@ var quizQuestions = {
 
     //Done Function
     done: function () {
-        $.each($("input[name='question-0']:checked"), function () {
+        $.each($("input[name='question-0']:checked"), function() {
             if ($(this).val() === questions[0].correctAns) {
                 quizQuestions.correct++;
             } else {
@@ -95,7 +95,7 @@ var quizQuestions = {
             }
         });
 
-        $.each($("input[name='question-1']:checked"), function () {
+        $.each($("input[name='question-1']:checked"), function() {
             if ($(this).val() === questions[1].correctAns) {
                 quizQuestions.correct++;
             } else {
@@ -103,7 +103,7 @@ var quizQuestions = {
             }
         });
 
-        $.each($("input[name='question-2']:checked"), function () {
+        $.each($("input[name='question-2']:checked"), function() {
             if ($(this).val() === questions[2].correctAns) {
                 quizQuestions.correct++;
             } else {
@@ -111,7 +111,7 @@ var quizQuestions = {
             }
         });
 
-        $.each($("input[name='question-3']:checked"), function () {
+        $.each($("input[name='question-3']:checked"), function() {
             if ($(this).val() === questions[3].correctAns) {
                 quizQuestions.correct++;
             } else {
@@ -119,7 +119,7 @@ var quizQuestions = {
             }
         });
 
-        $.each($("input[name='question-4']:checked"), function () {
+        $.each($("input[name='question-4']:checked"), function() {
             if ($(this).val() === questions[4].correctAns) {
                 quizQuestions.correct++;
             } else {
@@ -127,7 +127,7 @@ var quizQuestions = {
             }
         });
 
-        $.each($("input[name='question-5']:checked"), function () {
+        $.each($("input[name='question-5']:checked"), function() {
             if ($(this).val() === questions[5].correctAns) {
                 quizQuestions.correct++;
             } else {
@@ -135,7 +135,7 @@ var quizQuestions = {
             }
         });
 
-        $.each($("input[name='question-6']:checked"), function () {
+        $.each($("input[name='question-6']:checked"), function() {
             if ($(this).val() === questions[6].correctAns) {
                 quizQuestions.correct++;
             } else {
@@ -143,7 +143,7 @@ var quizQuestions = {
             }
         });
 
-        $.each($("input[name='question-7']:checked"), function () {
+        $.each($("input[name='question-7']:checked"), function() {
             if ($(this).val() === questions[7].correctAns) {
                 quizQuestions.correct++;
             } else {
@@ -151,7 +151,7 @@ var quizQuestions = {
             }
         });
 
-        $.each($("input[name='question-8']:checked"), function () {
+        $.each($("input[name='question-8']:checked"), function() {
             if ($(this).val() === questions[8].correctAns) {
                 quizQuestions.correct++;
             } else {
@@ -159,7 +159,7 @@ var quizQuestions = {
             }
         });
 
-        $.each($("input[name='question-9']:checked"), function () {
+        $.each($("input[name='question-9']:checked"), function() {
             if ($(this).val() === questions[9].correctAns) {
                 quizQuestions.correct++;
             } else {
